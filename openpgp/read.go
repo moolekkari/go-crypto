@@ -134,9 +134,9 @@ ParsePackets:
 				}
 			}
 		case *packet.SymmetricallyEncrypted:
-			if !p.IntegrityProtected && !config.AllowUnauthenticatedMessages() {
-				return nil, errors.UnsupportedError("message is not integrity protected")
-			}
+			// if !p.IntegrityProtected && !config.AllowUnauthenticatedMessages() {
+			// 	return nil, errors.UnsupportedError("message is not integrity protected")
+			// }
 			edp = p
 			break ParsePackets
 		case *packet.AEADEncrypted:
