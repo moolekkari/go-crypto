@@ -19,14 +19,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/ecdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/elgamal"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
+	"github.com/moolekkari/go-crypto/openpgp/ecdh"
+	"github.com/moolekkari/go-crypto/openpgp/ecdsa"
+	"github.com/moolekkari/go-crypto/openpgp/eddsa"
+	"github.com/moolekkari/go-crypto/openpgp/elgamal"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/internal/algorithm"
+	"github.com/moolekkari/go-crypto/openpgp/internal/ecc"
+	"github.com/moolekkari/go-crypto/openpgp/internal/encoding"
 )
 
 type kdfHashFunction byte

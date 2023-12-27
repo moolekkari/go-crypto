@@ -13,15 +13,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/ecdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/elgamal"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/moolekkari/go-crypto/openpgp/armor"
+	"github.com/moolekkari/go-crypto/openpgp/ecdh"
+	"github.com/moolekkari/go-crypto/openpgp/ecdsa"
+	"github.com/moolekkari/go-crypto/openpgp/eddsa"
+	"github.com/moolekkari/go-crypto/openpgp/elgamal"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/internal/algorithm"
+	"github.com/moolekkari/go-crypto/openpgp/packet"
+	"github.com/moolekkari/go-crypto/openpgp/s2k"
 )
 
 var hashes = []crypto.Hash{
@@ -1489,7 +1489,7 @@ func TestEncryptAndDecryptPrivateKeys(t *testing.T) {
 			if err != nil {
 				t.Fatal(err)
 			}
-	
+
 			if !entity.PrivateKey.Encrypted {
 				t.Fatal("Expected encrypted private key")
 			}
@@ -1498,12 +1498,12 @@ func TestEncryptAndDecryptPrivateKeys(t *testing.T) {
 					t.Fatal("Expected encrypted private key")
 				}
 			}
-	
+
 			err = entity.DecryptPrivateKeys(passphrase)
 			if err != nil {
 				t.Fatal(err)
 			}
-	
+
 			if entity.PrivateKey.Encrypted {
 				t.Fatal("Expected plaintext private key")
 			}
@@ -1514,7 +1514,6 @@ func TestEncryptAndDecryptPrivateKeys(t *testing.T) {
 			}
 		})
 	}
-	
 
 }
 

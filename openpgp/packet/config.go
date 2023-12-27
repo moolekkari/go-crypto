@@ -11,7 +11,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/moolekkari/go-crypto/openpgp/s2k"
 )
 
 // Config collects a number of parameters along with sensible defaults.

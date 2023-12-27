@@ -13,13 +13,13 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/ecdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/moolekkari/go-crypto/openpgp/ecdh"
+	"github.com/moolekkari/go-crypto/openpgp/ecdsa"
+	"github.com/moolekkari/go-crypto/openpgp/eddsa"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/internal/algorithm"
+	"github.com/moolekkari/go-crypto/openpgp/internal/ecc"
+	"github.com/moolekkari/go-crypto/openpgp/packet"
 )
 
 // NewEntity returns an Entity that contains a fresh RSA/RSA keypair with a

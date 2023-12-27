@@ -13,7 +13,7 @@ import (
 	mathrand "math/rand"
 	"testing"
 
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/moolekkari/go-crypto/openpgp/s2k"
 )
 
 const maxPassLen = 64
@@ -151,7 +151,7 @@ func TestSerializeSymmetricKeyEncryptedCiphersV4(t *testing.T) {
 					config := &Config{
 						DefaultCipher: cipher,
 						S2KConfig: &s2k.Config{
-							S2KMode: s2ktype,
+							S2KMode:                 s2ktype,
 							PassphraseIsHighEntropy: true,
 						},
 					}

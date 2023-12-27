@@ -10,8 +10,8 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/s2k"
 )
 
 // This is the largest session key that we'll support. Since at most 256-bit cipher

@@ -12,10 +12,10 @@ import (
 	"math/big"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/elgamal"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
+	"github.com/moolekkari/go-crypto/openpgp/ecdh"
+	"github.com/moolekkari/go-crypto/openpgp/elgamal"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/internal/encoding"
 )
 
 const encryptedKeyVersion = 3

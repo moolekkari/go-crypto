@@ -15,9 +15,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/moolekkari/go-crypto/openpgp/armor"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/packet"
 )
 
 func readerFromHex(s string) io.Reader {

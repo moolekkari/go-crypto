@@ -5,7 +5,7 @@
 // Package s2k implements the various OpenPGP string-to-key transforms as
 // specified in RFC 4800 section 3.7.1, and Argon2 specified in
 // draft-ietf-openpgp-crypto-refresh-08 section 3.7.1.4.
-package s2k // import "github.com/ProtonMail/go-crypto/openpgp/s2k"
+package s2k // import "github.com/moolekkari/go-crypto/openpgp/s2k"
 
 import (
 	"crypto"
@@ -13,8 +13,8 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/internal/algorithm"
 	"golang.org/x/crypto/argon2"
 )
 
@@ -87,10 +87,10 @@ func decodeCount(c uint8) int {
 // encodeMemory converts the Argon2 "memory" in the range parallelism*8 to
 // 2**31, inclusive, to an encoded memory. The return value is the
 // octet that is actually stored in the GPG file. encodeMemory panics
-// if is not in the above range 
+// if is not in the above range
 // See OpenPGP crypto refresh Section 3.7.1.4.
 func encodeMemory(memory uint32, parallelism uint8) uint8 {
-	if memory < (8 * uint32(parallelism)) || memory > uint32(2147483648) {
+	if memory < (8*uint32(parallelism)) || memory > uint32(2147483648) {
 		panic("Memory argument memory is outside the required range")
 	}
 
@@ -199,8 +199,8 @@ func Generate(rand io.Reader, c *Config) (*Params, error) {
 		}
 
 		params = &Params{
-			mode:      SaltedS2K,
-			hashId:    hashId,
+			mode:   SaltedS2K,
+			hashId: hashId,
 		}
 	} else { // Enforce IteratedSaltedS2K method otherwise
 		hashId, ok := algorithm.HashToHashId(c.hash())
@@ -211,7 +211,7 @@ func Generate(rand io.Reader, c *Config) (*Params, error) {
 			c.S2KMode = IteratedSaltedS2K
 		}
 		params = &Params{
-			mode:      IteratedSaltedS2K, 
+			mode:      IteratedSaltedS2K,
 			hashId:    hashId,
 			countByte: c.EncodedCount(),
 		}
@@ -306,9 +306,12 @@ func (params *Params) Dummy() bool {
 
 func (params *Params) salt() []byte {
 	switch params.mode {
-		case SaltedS2K, IteratedSaltedS2K: return params.saltBytes[:8]
-		case Argon2S2K: return params.saltBytes[:Argon2SaltSize]
-		default: return nil
+	case SaltedS2K, IteratedSaltedS2K:
+		return params.saltBytes[:8]
+	case Argon2S2K:
+		return params.saltBytes[:Argon2SaltSize]
+	default:
+		return nil
 	}
 }
 

@@ -14,11 +14,11 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdsa"
-	"github.com/ProtonMail/go-crypto/openpgp/eddsa"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
+	"github.com/moolekkari/go-crypto/openpgp/ecdsa"
+	"github.com/moolekkari/go-crypto/openpgp/eddsa"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/internal/algorithm"
+	"github.com/moolekkari/go-crypto/openpgp/internal/encoding"
 )
 
 const (

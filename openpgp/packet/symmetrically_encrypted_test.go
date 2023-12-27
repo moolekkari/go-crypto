@@ -14,7 +14,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
+	"github.com/moolekkari/go-crypto/openpgp/errors"
 )
 
 // TestReader wraps a []byte and returns reads of a specific length.
